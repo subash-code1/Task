@@ -1,0 +1,547 @@
+                                CSS
+                            ------------
+
+  -->  Stands for Cascading Style Sheet
+  --> Responsible for stylish the web
+
+
+Three types of CSS
+------------------
+
+    1) Inline CSS
+    2) Internal CSS
+    3) External CSS
+
+1)Inline CSS
+------------
+
+<body>
+    <!--Inline CSS -->
+    <h1 style="color:royalblue;font-size:100px">Hello World</h1>
+</body>
+
+
+2) Internal CSS
+---------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Internal CSS -->
+    <style>
+        h1
+        {
+            color:orange;
+            font-size:50px;    
+        }
+        h2
+        {
+            color:deeppink;
+            font-size:80px;
+        }
+        h3
+        {
+            color:gold;
+            font-size:110px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+</body>
+</html>
+
+3) External CSS
+---------------
+index.html
+----------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+</body>
+</html>
+
+
+styles.css
+---------
+
+h1
+{
+    color:orange;
+    font-size:50px;    
+}
+h2
+{
+    color:deeppink;
+    font-size:80px;
+}
+h3
+{
+    color:gold;
+    font-size:110px;
+}
+
+
+CSS Comments :
+-------------
+
+/* External CSS */
+
+/*
+*
+*
+
+*/
+
+
+Power Struggle
+---------------
+
+index.html
+-----------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        h1
+        {
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:violet">Hello World</h1>
+</body>
+</html>
+
+
+styles.css
+---------
+
+h1
+{
+    color:orange;
+    font-size:100px;    
+}
+
+
+Basic CSS Syntax:
+-----------------
+
+h1      -----> Selector
+{
+ color       --->  property
+ :           --->  colon        /* Declaration- Block */
+ blue;        ---> value
+}
+
+
+
+1) Element sector 
+-----------------
+
+index.html
+----------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Hello :)</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ipsam dignissimos neque dolor sed cum, enim laudantium quaerat excepturi cumque minus, nemo consequuntur expedita voluptates eum accusantium. Magnam, eos facilis?
+    </p>
+    <h2>Hai....</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt in earum, delectus dolor, eligendi modi blanditiis consequatur officia iusto vero animi optio? Quo pariatur nihil quos quia, distinctio quod cumque?
+    </p>
+</body>
+</html>
+
+
+styles.css
+----------
+
+h1
+{
+    color: blue;
+}
+p
+{
+    color:deeppink;
+    background-color: yellow;
+}
+h2{
+    color:firebrick;
+}
+
+
+
+Live server : http://127.0.0.1:5500/index.html
+
+
+Grouping Selectors:
+-------------------
+
+
+styles.css
+---------
+
+h1, p , h2
+{
+    color: crimson;
+    background-color: darkgray;
+}
+
+index.html
+----------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Hello :)</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ipsam dignissimos neque dolor sed cum, enim laudantium quaerat excepturi cumque minus, nemo consequuntur expedita voluptates eum accusantium. Magnam, eos facilis?
+    </p>
+    <h2>Hai....</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt in earum, delectus dolor, eligendi modi blanditiis consequatur officia iusto vero animi optio? Quo pariatur nihil quos quia, distinctio quod cumque?
+    </p>
+</body>
+</html>
+
+
+Id Selector
+-----------
+index.html
+------------
+body>
+    <h1 id="title">Title Heading</h1>
+    <h1 id="subheading">Sub-Heading</h1>
+</body>
+</html>
+
+styles.css
+-----------
+
+#title
+{
+    color: red;
+}
+#subheading
+{
+    color:violet;
+}
+
+
+Class Selectors:
+----------------
+
+
+index.html
+----------
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1 class="green">I am Green</h1>
+    <h1 class="red">I am Red</h1>
+    <h1 class="green">I am Green</h1>
+    <h1 class="red">I am red</h1>
+</body>
+</html>
+
+
+styles.css
+---------
+
+
+.green
+{
+    color:green;
+}
+.red
+{
+    color:tomato;
+}
+
+
+
+Id and Class Selectors:
+-----------------------
+
+
+index.html
+----------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h3 id="title" class="green lowercase">I am Green</h3>
+    <h3 class="red"> I am Red</h3>
+    <h3 class="green">I am Green</h3>
+    <h3 class="red lowercase">I am red</h3>
+</body>
+</html>
+
+
+styles.css
+-----------
+
+
+.green
+{
+    color:green;
+}
+.red
+{
+    color: red;
+}
+#title
+{
+    font-size:50px;
+    color:royalblue;
+}
+.lowercase
+{
+    text-transform: lowercase;
+}
+
+
+div and span
+------------
+
+
+--> It is used for grouping..
+--> div - Block
+--> span - inline
+
+div Element is block level and acts as a container for other HTML documents.
+
+span Element is inline Element as part of a text
+
+
+.h
+{
+    border: 2px solid red;
+    background-color: burlywood;
+}
+
+span
+{
+    border:2px solid blue;
+}
+
+p
+{
+    border:2px solid pink;
+    color:yellow;
+}
+
+
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+   <div class="h">
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quae blanditiis architecto cum hic, possimus, harum minus id accusantium tempore doloremque, ratione nostrum quod placeat nam quasi sit dolore est!s<span>Hello World</span>
+    </p>
+   </div>
+</body>
+</html>
+
+
+Last Rule
+---------
+p
+{
+    color: red;
+}
+p
+{
+    color:purple;  /*Last rule , it will be affected.*/
+}
+
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, voluptatibus neque eligendi, suscipit dolores quae temporibus minima deserunt a similique quos ducimus ut! Laboriosam, beatae fugiat quae reiciendis omnis atque!
+    </p>
+</body>
+
+Universal Selector:
+-------------------
+
+*
+{
+    color: red;
+    font-size: 50px;
+}
+
+p{
+    color:royalblue;
+    font-size: 20px;
+}
+h1{
+    color:saddlebrown;
+}
+
+---
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, voluptatibus neque eligendi, suscipit dolores quae temporibus minima deserunt a similique quos ducimus ut! Laboriosam, beatae fugiat quae reiciendis omnis atque!
+    </p>
+    <h1>Hello Word</h1>
+    <h2>Hai</h2>
+    <h5>Hello</h5>
+</body>
+</html>
+
+
+
+Color Properties & background color
+-----------------------------------
+
+Color Name
+---------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+   <h1 id="first">I am Heading One</h1>
+   <h1 id="second">I am Second Heading</h1>
+</body>
+</html>
+
+---
+
+#first
+{
+    color:red;
+    background-color: saddlebrown;
+}
+#second
+{
+    color:seagreen;
+    background-color: orange;
+}
+
+
+RGB
+----
+---> Red Green Blue
+--->  (0 to 255)
+
+
+(0,255,0)
+
+
+#first
+{
+    color:rgb(255,0,0);
+    background-color: rgb(0,0,0);
+}
+#second
+{
+    color:rgb(0,255,0);
+    background-color: rgb(255,255,255);
+}
+
+#third
+{
+    color:rgb(0,0,255);
+    background-color: rgb(100,100,100);
+}
+body
+{
+    background-color: rgb(100,25,210);
+}
+
+
+
+---
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+   <h1 id="first">I am Heading One</h1>
+   <h1 id="second">I am Second Heading</h1>
+   <h1 id="third">I am Third Heading</h1>
+</body>
+</html>
+
+
+RGBA (Opacity / transparency)
+-----------------------------
+
+A(0-1)
+
+#first
+{
+    color:rgb(100,100,255);
+    background-color: rgba(0,0,0,0.5);
+}
+#second
+{
+    color:rgb(100,100,255);
+    background-color: rgba(0,0,0,0.25);
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+   <h1 id="first">I am Heading One</h1>
+   <h1 id="second">I am Second Heading</h1>
+   <h1 id="third">I am Third Heading</h1>
+</body>
+</html>
+
+
+
