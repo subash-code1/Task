@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Confirm Token</h1>
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <p>DOCTOR NAME: <strong>DR.{{ doctor.name|upper }}</strong></p>
+                <p>NEXT TOKEN NUMBER: <strong>{{ next_token_number }}</strong></p>
+                {% if current_token is None %}
+                <p>CURRENT TOKEN UNDER CONSULTATION: <strong>FREE</strong></p>
+                {% else %}
+                <p>CURRENT TOKEN UNDER CONSULTATION: <strong>{{ current_token.number }}</strong></p>
+                {% endif %}
+                <p>APPROXIMATE WAITING TIME: <strong>{{ approximate_waiting_time }} MINUTES</strong></p>
+                <p>YOUR TOKEN NUMBER: <strong>{{next_token_number}}</strong></p>
+                <form method="post" action="{% url 'generate_token' doctor.id  %}">
+                    {% csrf_token %}
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary" value="CONFIRM">
+
+                    </div>
+                </form>
+                <div class="form-group text-center">
+                    <a href="{% url 'select_department' %}">
+                        <button class="btn btn-secondary">CANCEL</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Token Reset</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="text-center">Token Numbers have been reset for all departments.</p>
+                <div class="form-group text-center">
+                    <a href="{% url 'select_department' %}" class="btn btn-primary">GO TO HOME</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
